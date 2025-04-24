@@ -5,6 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alia Hall | alia.net</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      margin: 0;
+    }
+    .header {
+      background-color: #000;
+      color: #ffc904;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+    }
+    .nav-links a {
+      color: #ffc904;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .content {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -13,40 +53,86 @@
     <h3>McKnight Doctoral Fellow, University of Central Florida</h3>
     <nav>
       <ul class="nav-links">
-        <li><a href="assets/Alia_Hall_CV_Resume_2025.pdf" target="_blank">Resume</a></li>
-        <li><a href="#bio">Bio</a></li>
-        <li><a href="#samples">Writing</a></li>
+        <li><a href="#professional-experience">Professional Experience</a></li>
+        <li><a href="#writing-sample">Writing Sample</a></li>
         <li><a href="#presentations">Talks</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
+
   <main class="content">
-    <section id="bio">
-      <h2>About Me</h2>
-      <p>I’m Alia Hall, a passionate educator, researcher, and practitioner in communication and technology. I currently serve as an Assistant Professor at Daytona State College and am pursuing my PhD in Texts and Technology at the University of Central Florida. My work centers on inclusive technical communication, AI ethics, and digital Black feminist rhetoric. I'm also honored to be a McKnight Doctoral Fellow, promoting access and excellence in graduate education.</p>
-    </section>
-    <section id="samples">
-      <h2>Writing Samples</h2>
+    <section id="professional-experience">
+      <h2>Professional Experience</h2>
+      <h3>Academic Positions</h3>
       <ul>
-        <li><a href="assets/Race_Tech_Trust_AI_Disparities.pdf" target="_blank">Race, Technology, and Trust</a></li>
+        <li><strong>Assistant Professor of Communication</strong> – Daytona State College (2024–Present)</li>
+        <li><strong>Program Manager II</strong> – UCF Lockheed Martin College Work Experience Program (2023)</li>
+        <li><strong>GTA & Internship Programs</strong> – UCF Inclusive Education Services, Experiential Learning (2021–2023)</li>
+        <li><strong>Career Advisor</strong> – Rollins College (2019–2021)</li>
+      </ul>
+
+      <h3>Industry Experience</h3>
+      <ul>
+        <li><strong>Sr. Business Analyst</strong> – NCR Corporation (2001–2004)</li>
+        <li><strong>Sales & Fraud Analyst Roles</strong> – AT&T, Verizon Wireless, BellSouth</li>
+      </ul>
+
+      <h3>Education</h3>
+      <ul>
+        <li>PhD Student in Texts & Technology – UCF (McKnight Fellow)</li>
+        <li>MA in Communication – UCF</li>
+        <li>BA in Communication Studies – Rollins College</li>
+      </ul>
+
+      <h3>Publications & Presentations</h3>
+      <ul>
+        <li><strong>Book:</strong> "When Life Pushes You Over the Edge, God Will Catch Your Fall" (2009)</li>
+        <li><strong>IEEE SSCI 2025:</strong> Decoding the Black Box (with PD Edgar)</li>
+        <li><strong>Florida Digital Humanities:</strong> Generative Representation of Racialized Faces</li>
+        <li><strong>IEEE ProComm 2025:</strong> Race, Technology, and Trust</li>
       </ul>
     </section>
+
+    <section id="writing-sample">
+      <h2>Writing Sample</h2>
+      <p><strong>Title:</strong> Race, Technology, and Trust — Examining the Cheating Discourse Among Black and Asian AI Users</p>
+      <p><strong>Authors:</strong> Alia Hall and Yingzi Kong, University of Central Florida</p>
+      <p>This research examines cultural biases and assumptions of dishonesty experienced by Black and Asian students using AI in academia. It utilizes Critical Technocultural Discourse Analysis (CTDA) and feminist autoethnography to expose technocultural inequities and to advocate for culturally responsive AI pedagogy.</p>
+      <ul>
+        <li>AI detectors and academic structures often reproduce racial biases.</li>
+        <li>Black and Asian students are disproportionately scrutinized for AI usage.</li>
+        <li>Critical Race Algorithmic Literacy (CRAL) is proposed as a solution to empower students through awareness and resistance.</li>
+      </ul>
+      <p>This work highlights how marginalized students challenge cheating discourse and affirms the need for inclusive AI literacy and leadership in education.</p>
+    </section>
+
     <section id="presentations">
       <h2>Presentations</h2>
       <ul>
+        <li>IEEE ProComm 2025: Race, Technology, and Trust — Examining the Cheating Discourse Among Black and Asian AI Users</li>
         <li>Florida Digital Humanities: Generative Representation of Racialized Faces</li>
         <li>IEEE SSCI 2025: Decoding the Black Box</li>
       </ul>
     </section>
+
     <section id="contact">
       <h2>Contact Me</h2>
       <p>Email: <a href="mailto:alia.hall@daytonastate.edu">alia.hall@daytonastate.edu</a></p>
       <p>Alternate: <a href="mailto:alia.hall@ucf.edu">alia.hall@ucf.edu</a></p>
     </section>
   </main>
+
   <footer class="footer">
     <p>&copy; 2025 Alia Hall. All rights reserved.</p>
   </footer>
 </body>
 </html>
+"""
+
+# Save the fully enhanced index.html file
+enhanced_full_index_path = "/mnt/data/index_full_enhanced.html"
+with open(enhanced_full_index_path, "w") as f:
+    f.write(enhanced_index_full)
+
+enhanced_full_index_path
