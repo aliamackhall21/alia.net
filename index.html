@@ -44,9 +44,23 @@
       text-align: center;
       padding: 1rem 0;
     }
+    .download-btn {
+      display: inline-block;
+      background-color: #ffc904;
+      color: black;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    .download-btn:hover {
+      background-color: #e0b803;
+    }
   </style>
 </head>
-<body>
+
+<body onload="window.scrollTo(0, 0);">
+
   <header class="header">
     <h1>Alia Hall</h1>
     <h2>Assistant Professor of Communications, Daytona State College</h2>
@@ -55,15 +69,17 @@
       <ul class="nav-links">
         <li><a href="#professional-experience">Professional Experience</a></li>
         <li><a href="#writing-sample">Writing Sample</a></li>
-        <li><a href="#presentations">Presenter</a></li>
+        <li><a href="#presentations">Talks</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="content">
+
     <section id="professional-experience">
       <h2>Professional Experience</h2>
+
       <h3>Academic Positions</h3>
       <ul>
         <li><strong>Assistant Professor of Communication</strong> – Daytona State College (2024–Present)</li>
@@ -75,15 +91,24 @@
       <h3>Industry Experience</h3>
       <ul>
         <li><strong>Sr. Business Analyst</strong> – NCR Corporation (2001–2004)</li>
-        <li><strong>Business Marketing, Project Management & Analyst Roles</strong> – AT&T, Verizon Wireless, BellSouth</li>
-      </ul> More than fifteen years industry experience
+        <li><strong>Sales & Fraud Analyst Roles</strong> – AT&T, Verizon Wireless, BellSouth</li>
+        <li>More than fifteen years industry experience</li>
+      </ul>
 
       <h3>Education</h3>
       <ul>
-        <li>PhD Student in Texts & Technology, Scientific & Tech Comm – UCF (McKnight Fellow)</li>
-        <li>MA in Communication – UCF</li>
-        <li>BA in Communication Studies – Rollins College</li>
+        <li><strong>PhD (anticipated Fall 2026)</strong> – Texts and Technology, University of Central Florida (McKnight Doctoral Fellow)
+          <ul><li>Completed Comprehensive Exams – Spring 2025</li></ul>
+        </li>
+        <li><strong>Master of Arts (2022)</strong> – Communication, University of Central Florida</li>
+        <li><strong>Bachelor of Arts (2019)</strong> – Communication Studies, Rollins College</li>
       </ul>
+
+      <p>
+        <a href="https://aliamackhall21.github.io/alia.net/Alia_Hall_CV_Resume_2025.pdf" download class="download-btn">
+          📄 Download Full Resume (PDF)
+        </a>
+      </p>
 
       <h3>Publications & Presentations</h3>
       <ul>
@@ -118,13 +143,26 @@
 
     <section id="contact">
       <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:alia.hall@daytonastate.edu">alia.hall@daytonastate.edu</a></p>
-      <p>Alternate: <a href="mailto:alia.hall@ucf.edu">alia.hall@ucf.edu</a></p>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <label for="name">Your Name:</label><br>
+        <input type="text" name="name" id="name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" name="_replyto" id="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea name="message" id="message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+      </form>
     </section>
+
   </main>
 
   <footer class="footer">
     <p>&copy; 2025 Alia Hall. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
+
