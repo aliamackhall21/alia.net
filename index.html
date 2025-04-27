@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +20,7 @@
       top: 0;
       background-color: #000;
       color: #ffc904;
-      padding: 1rem 0;
+      padding: 1rem 0 2rem 0;
       z-index: 999;
     }
     .nav-links {
@@ -29,11 +28,11 @@
       justify-content: center;
       gap: 2rem;
       list-style: none;
-      margin: 0;
+      margin-top: 1rem;
       padding: 0;
     }
     .nav-links a {
-      color: #ffc904;
+      color: #3498db;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
@@ -57,12 +56,6 @@
       background-color: #f5faff;
       transition: background-color 0.5s ease;
     }
-      margin-bottom: 4rem;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
     h2 {
       border-bottom: 2px solid #ffc904;
       padding-bottom: 0.5rem;
@@ -79,7 +72,6 @@
       max-width: 150px;
       height: auto;
     }
-  
     #topBtn {
       display: none;
       position: fixed;
@@ -99,8 +91,16 @@
     #topBtn:hover {
       background-color: #e0b803;
     }
-    </style>
-    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
 <body>
@@ -115,6 +115,7 @@
         <li><a href="#writing-sample">Writing Sample</a></li>
         <li><a href="#presentations">Talks</a></li>
         <li><a href="#academic-features">Academic Features</a></li>
+        <li><a href="#critical-making">Critical Making Tools</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -122,7 +123,7 @@
 
   <main class="content">
 
-    <section id="professional-experience">
+    <section id="professional-experience" class="fade-in">
       <h2>Professional Experience</h2>
       <h3>Academic Positions</h3>
       <ul>
@@ -157,20 +158,14 @@
       </ul>
     </section>
 
-    <section id="writing-sample">
+    <section id="writing-sample" class="fade-in">
       <h2>Writing Sample</h2>
       <p><strong>Title:</strong> Race, Technology, and Trust — Examining the Cheating Discourse Among Black and Asian AI Users</p>
       <p><strong>Authors:</strong> Alia Hall and Yingzi Kong, University of Central Florida</p>
       <p>This research examines cultural biases and assumptions of dishonesty experienced by Black and Asian students using AI in academia. It utilizes Critical Technocultural Discourse Analysis (CTDA) and feminist autoethnography to expose technocultural inequities and to advocate for culturally responsive AI pedagogy.</p>
-      <ul>
-        <li>AI detectors and academic structures often reproduce racial biases.</li>
-        <li>Black and Asian students are disproportionately scrutinized for AI usage.</li>
-        <li>Critical Race Algorithmic Literacy (CRAL) is proposed as a solution to empower students through awareness and resistance.</li>
-      </ul>
-      <p>This work highlights how marginalized students challenge cheating discourse and affirms the need for inclusive AI literacy and leadership in education.</p>
     </section>
 
-    <section id="presentations">
+    <section id="presentations" class="fade-in">
       <h2>Presentations</h2>
       <ul>
         <li>IEEE ProComm 2025: Race, Technology, and Trust — Examining the Cheating Discourse Among Black and Asian AI Users</li>
@@ -179,7 +174,7 @@
       </ul>
     </section>
 
-    <section id="academic-features">
+    <section id="academic-features" class="fade-in">
       <h2>Academic Features</h2>
       <ul>
         <li><strong>Graduate Research Fellowship</strong> – University of Central Florida</li>
@@ -190,7 +185,17 @@
       </ul>
     </section>
 
-    <section id="contact">
+    <section id="critical-making" class="fade-in">
+      <h2>Critical Making Tools</h2>
+      <ul>
+        <li><strong>Voyant Tools:</strong> A web-based text analysis environment for creating visualizations, word clouds, and text analysis dashboards for humanities research.</li>
+        <li><strong>OpenProcessing:</strong> A creative coding platform to build digital art, animations, and interactive web experiences using p5.js.</li>
+        <li><strong>ChatGPT:</strong> An AI assistant that generates content, assists with coding, site design, and acts as a collaborative partner for digital humanities projects.</li>
+        <li><strong>Bitsy:</strong> A pixel art game maker that empowers users to create narrative-driven games and interactive digital storytelling experiences easily.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="fade-in">
       <h2>Contact Me</h2>
       <p>Email: <a href="mailto:alia.hall@daytonastate.edu">alia.hall@daytonastate.edu</a></p>
       <p>Alternate Email: <a href="mailto:alia.hall@ucf.edu">alia.hall@ucf.edu</a></p>
@@ -204,29 +209,40 @@
       <img src="mcknight_logo_png.png" alt="McKnight Doctoral Fellowship" style="max-width: 150px; height: auto;" />
       <p style="font-size: 0.9rem; margin-top: 0.5rem;">Proud McKnight Doctoral Fellow</p>
     </div>
-  
-    </footer>
-    <button onclick="topFunction()" id="topBtn" title="Go to top">⬆️ Top</button>
-    
+  </footer>
 
+  <button onclick="topFunction()" id="topBtn" title="Go to top">⬆️ Top</button>
 
-    <script>
-      let mybutton = document.getElementById("topBtn");
-      window.onscroll = function() {scrollFunction()};
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
+  <script>
+    // Back to Top Button
+    let mybutton = document.getElementById("topBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
       }
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
-    </body>
-    
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    // Fade-in Animation
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1 };
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) { return; }
+        entry.target.classList.add('show');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+</body>
 </html>
-
-
