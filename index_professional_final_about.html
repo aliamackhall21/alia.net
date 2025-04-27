@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alia Hall | Academic Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: linear-gradient(to bottom, #fdfdfd, #f4f4f4);
+      color: #333;
+      margin: 0;
+    }
+    #loader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      background-color: #000;
+      color: #ffc904;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      transition: opacity 1s ease-out;
+    }
+    #loader.fade {
+      opacity: 0;
+      visibility: hidden;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #000;
+      color: #ffc904;
+      padding: 0.8rem 0 1.2rem 0;
+      z-index: 999;
+      font-size: 0.95rem;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: #ffc904;
+      position: relative;
+      text-decoration: none;
+      font-weight: bold;
+      padding-bottom: 3px;
+      transition: color 0.3s;
+      font-size: 0.92rem;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffc904;
+      transition: width 0.3s ease-out;
+    }
+    .nav-links a:hover {
+      color: white;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .content {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 4rem;
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    section:hover {
+      background-color: #f7faff;
+      transition: background-color 0.5s ease;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #ffc904;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #ffc904;
+      padding-bottom: 0.5rem;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .footer img {
+      margin-top: 1rem;
+      max-width: 150px;
+      height: auto;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .card:hover {
+      background-color: #f5faff;
+      transform: translateY(-5px);
+    }
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 40px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #ffc904;
+      color: black;
+      cursor: pointer;
+      padding: 12px 16px;
+      border-radius: 50px;
+      transition: background-color 0.3s;
+    }
+    #topBtn:hover {
+      background-color: #e0b803;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<div id="loader">Alia Hall</div>
+
+<header class="header">
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#writing-sample">Writing Sample</a></li>
+      <li><a href="#presentations">Talks</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#critical-making">Critical Making</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content">
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>Alia Hall is an Assistant Professor of Communication at Daytona State College and a McKnight Doctoral Fellow in the Texts and Technology Ph.D. program at the University of Central Florida. With over fifteen years of technical industry experience and a strong background in higher education program management, her research interests focus on AI literacy, digital humanities, critical technocultural discourse, and inclusive pedagogical practices.</p>
+  </section>
+  <section id="home" class="fade-in">
+    <h2>Professional Experience</h2>
+    <p><strong>Assistant Professor of Communication</strong> – Daytona State College (2024–Present)</p>
+    <p><strong>Program Manager II</strong> – UCF Lockheed Martin College Work Experience Program (2023)</p>
+    <p><strong>GTA & Internship Program Consultant</strong> – UCF Inclusive Education Services, Experiential Learning (2021–2023)</p>
+    <p><strong>Career Advisor</strong> – Rollins College (2019–2021)</p>
+  </section>
+
+  <section id="writing-sample" class="fade-in">
+    <h2>Writing Sample</h2>
+    <p><strong>Race, Technology, and Trust</strong> — Examining the Cheating Discourse Among Black and Asian AI Users</p>
+    <p>By Alia Hall and Yingzi Kong, University of Central Florida</p>
+  </section>
+
+  <section id="presentations" class="fade-in">
+    <h2>Talks</h2>
+    <ul>
+      <li>IEEE ProComm 2025 – Race, Technology, and Trust</li>
+      <li>Florida Digital Humanities – Generative Representation of Racialized Faces</li>
+      <li>IEEE SSCI 2025 – Decoding the Black Box</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="card-grid">
+      <div class="card">
+        <strong>Digital Humanities Visualization</strong><br>
+        Interactive visual projects on race and technology.
+      </div>
+      <div class="card">
+        <strong>Inclusive AI Literacy Course</strong><br>
+        Curriculum design for equitable AI use.
+      </div>
+      <div class="card">
+        <strong>Academic Portfolio Sites</strong><br>
+        Personal website showcasing professional work.
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="fade-in">
+    <h2>Features</h2>
+    <div class="card-grid">
+      <div class="card">
+        <strong>Interviewed</strong> — UCF Graduate Newsletter 2025 on AI and Ethics.
+      </div>
+      <div class="card">
+        <strong>Featured Scholar</strong> — McKnight Fellowship Spotlight, Florida Education Fund.
+      </div>
+    </div>
+  </section>
+
+  <section id="critical-making" class="fade-in">
+    <h2>Critical Making Tools</h2>
+    <ul>
+      <li><a href="https://voyant-tools.org/" target="_blank">Voyant Tools</a> — Text analysis and visualization.</li>
+      <li><a href="https://openprocessing.org/" target="_blank">OpenProcessing</a> — Interactive digital art with code.</li>
+      <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a> — AI assistance for writing and coding.</li>
+      <li><a href="https://make.bitsy.org/" target="_blank">Bitsy</a> — Narrative pixel game maker.</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:alia.hall@daytonastate.edu">alia.hall@daytonastate.edu</a></p>
+    <p>Alternate: <a href="mailto:alia.hall@ucf.edu">alia.hall@ucf.edu</a></p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 Alia Hall. All rights reserved.</p>
+  <div style="text-align: center; margin-top: 1rem;">
+    <img src="mcknight_logo_png.png" alt="McKnight Doctoral Fellowship" style="max-width: 150px; height: auto;" />
+    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Proud McKnight Doctoral Fellow</p>
+  </div>
+</footer>
+
+<button onclick="topFunction()" id="topBtn" title="Go to top">⬆️ Top</button>
+
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    loader.classList.add("fade");
+  });
+  let mybutton = document.getElementById("topBtn");
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.1 };
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) { return; }
+      entry.target.classList.add('show');
+      appearOnScroll.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+</body>
+</html>
