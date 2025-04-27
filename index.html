@@ -1,9 +1,10 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alia Hall | Academic Portfolio</title>
   <style>
     html {
@@ -11,10 +12,10 @@
       scroll-padding-top: 80px;
     }
     body {
-      font-family: 'Georgia', 'Times New Roman', serif;
-      background: linear-gradient(to bottom, #fdfdfd, #f4f4f4);
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
       margin: 0;
+      color: #333;
     }
     #loader {
       position: fixed;
@@ -22,7 +23,6 @@
       top: 0;
       width: 100%;
       height: 100%;
-      z-index: 1000;
       background-color: #000;
       color: #ffc904;
       display: flex;
@@ -31,6 +31,7 @@
       font-size: 2rem;
       font-weight: bold;
       transition: opacity 1s ease-out;
+      z-index: 1000;
     }
     #loader.fade {
       opacity: 0;
@@ -41,37 +42,37 @@
       top: 0;
       background-color: #000;
       color: #ffc904;
-      padding: 0.8rem 0 1.2rem 0;
+      padding: 1.2rem 0 2rem 0;
+      text-align: center;
       z-index: 999;
-      font-size: 0.95rem;
     }
     .nav-links {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.5rem;
       list-style: none;
-      margin: 0;
+      margin-top: 1rem;
       padding: 0;
     }
     .nav-links a {
       color: #ffc904;
-      position: relative;
       text-decoration: none;
       font-weight: bold;
-      padding-bottom: 3px;
-      transition: color 0.3s;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
+      padding-bottom: 2px;
+      transition: color 0.3s ease;
+      position: relative;
     }
     .nav-links a::after {
       content: "";
       position: absolute;
       width: 0%;
       height: 2px;
-      bottom: 0;
       left: 0;
+      bottom: 0;
       background-color: #ffc904;
-      transition: width 0.3s ease-out;
+      transition: width 0.3s;
     }
     .nav-links a:hover {
       color: white;
@@ -80,31 +81,31 @@
       width: 100%;
     }
     .content {
-      max-width: 1100px;
-      margin: auto;
+      max-width: 960px;
+      margin: 0 auto;
       padding: 2rem;
     }
     section {
       margin-bottom: 4rem;
-      background: #fff;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
     section:hover {
-      background-color: #f7faff;
+      background-color: #fdfdfd;
       transition: background-color 0.5s ease;
     }
     h2 {
-      font-size: 2rem;
-      color: #ffc904;
       text-align: center;
-      margin-bottom: 1.5rem;
-      border-bottom: 3px solid #ffc904;
+      color: #ffc904;
+      border-bottom: 2px solid #ffc904;
+      margin-bottom: 2rem;
       padding-bottom: 0.5rem;
-      width: 50%;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 1.8rem;
+    }
+    p, ul {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.2rem;
     }
     footer {
       background-color: #000;
@@ -116,22 +117,6 @@
       margin-top: 1rem;
       max-width: 150px;
       height: auto;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-      transition: transform 0.3s, background-color 0.3s;
-    }
-    .card:hover {
-      background-color: #f5faff;
-      transform: translateY(-5px);
     }
     #topBtn {
       display: none;
@@ -167,11 +152,12 @@
 
 <div id="loader">Alia Hall</div>
 
-<header class="header">
+<header>
+  <h1>Alia Hall</h1>
+  <h2>Assistant Professor of Communication | McKnight Doctoral Fellow</h2>
   <nav>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#home">Home</a></li>
       <li><a href="#writing-sample">Writing Sample</a></li>
       <li><a href="#presentations">Talks</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -183,84 +169,65 @@
 </header>
 
 <main class="content">
+
   <section id="about" class="fade-in">
     <h2>About Me</h2>
     <p>Alia Hall is an Assistant Professor of Communication at Daytona State College and a McKnight Doctoral Fellow in the Texts and Technology Ph.D. program at the University of Central Florida. With over fifteen years of technical industry experience and a strong background in higher education program management, her research interests focus on AI literacy, digital humanities, critical technocultural discourse, and inclusive pedagogical practices.</p>
   </section>
-  <section id="home" class="fade-in">
-    <h2>Professional Experience</h2>
-    <p><strong>Assistant Professor of Communication</strong> – Daytona State College (2024–Present)</p>
-    <p><strong>Program Manager II</strong> – UCF Lockheed Martin College Work Experience Program (2023)</p>
-    <p><strong>GTA & Internship Program Consultant</strong> – UCF Inclusive Education Services, Experiential Learning (2021–2023)</p>
-    <p><strong>Career Advisor</strong> – Rollins College (2019–2021)</p>
-  </section>
-
+  <hr style="border: none; border-top: 2px solid #ffc904; width: 50%; margin: 3rem auto;">
   <section id="writing-sample" class="fade-in">
     <h2>Writing Sample</h2>
-    <p><strong>Race, Technology, and Trust</strong> — Examining the Cheating Discourse Among Black and Asian AI Users</p>
-    <p>By Alia Hall and Yingzi Kong, University of Central Florida</p>
+    <p><strong>Race, Technology, and Trust</strong> — Examining the Cheating Discourse Among Black and Asian AI Users<br>By Alia Hall and Yingzi Kong, University of Central Florida</p>
   </section>
-
+  <hr style="border: none; border-top: 2px solid #ffc904; width: 50%; margin: 3rem auto;">
   <section id="presentations" class="fade-in">
     <h2>Talks</h2>
     <ul>
-      <li>IEEE ProComm 2025 – Race, Technology, and Trust</li>
-      <li>Florida Digital Humanities – Generative Representation of Racialized Faces</li>
-      <li>IEEE SSCI 2025 – Decoding the Black Box</li>
+      <li>IEEE ProComm 2025 — Race, Technology, and Trust</li>
+      <li>Florida Digital Humanities — Generative Representation of Racialized Faces</li>
+      <li>IEEE SSCI 2025 — Decoding the Black Box</li>
     </ul>
   </section>
-
+  <hr style="border: none; border-top: 2px solid #ffc904; width: 50%; margin: 3rem auto;">
   <section id="projects" class="fade-in">
     <h2>Projects</h2>
-    <div class="card-grid">
-      <div class="card">
-        <strong>Digital Humanities Visualization</strong><br>
-        Interactive visual projects on race and technology.
-      </div>
-      <div class="card">
-        <strong>Inclusive AI Literacy Course</strong><br>
-        Curriculum design for equitable AI use.
-      </div>
-      <div class="card">
-        <strong>Academic Portfolio Sites</strong><br>
-        Personal website showcasing professional work.
-      </div>
-    </div>
+    <ul>
+      <li><strong>Digital Humanities Visualizations</strong> — Interactive projects on race and technology using p5.js and OpenProcessing.</li>
+      <li><strong>Inclusive AI Literacy Course</strong> — Curriculum development for equitable AI education in higher learning.</li>
+      <li><strong>Academic Portfolio Sites</strong> — Web design projects highlighting research and creative scholarship.</li>
+    </ul>
   </section>
-
+  <hr style="border: none; border-top: 2px solid #ffc904; width: 50%; margin: 3rem auto;">
   <section id="features" class="fade-in">
     <h2>Features</h2>
-    <div class="card-grid">
-      <div class="card">
-        <strong>Interviewed</strong> — UCF Graduate Newsletter 2025 on AI and Ethics.
-      </div>
-      <div class="card">
-        <strong>Featured Scholar</strong> — McKnight Fellowship Spotlight, Florida Education Fund.
-      </div>
-    </div>
+    <ul>
+      <li><strong>Interviewed</strong> — UCF Graduate Newsletter 2025 on AI and Ethics.</li>
+      <li><strong>Featured Scholar</strong> — McKnight Fellowship Spotlight, Florida Education Fund.</li>
+    </ul>
   </section>
-
+  <hr style="border: none; border-top: 2px solid #ffc904; width: 50%; margin: 3rem auto;">
   <section id="critical-making" class="fade-in">
     <h2>Critical Making Tools</h2>
     <ul>
-      <li><a href="https://voyant-tools.org/" target="_blank">Voyant Tools</a> — Text analysis and visualization.</li>
-      <li><a href="https://openprocessing.org/" target="_blank">OpenProcessing</a> — Interactive digital art with code.</li>
-      <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a> — AI assistance for writing and coding.</li>
-      <li><a href="https://make.bitsy.org/" target="_blank">Bitsy</a> — Narrative pixel game maker.</li>
+      <li><a href="https://voyant-tools.org/" target="_blank">Voyant Tools</a> — Web-based text analysis and visualization.</li>
+      <li><a href="https://openprocessing.org/" target="_blank">OpenProcessing</a> — Creative coding for interactive digital art.</li>
+      <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a> — AI support for coding, writing, and academic projects.</li>
+      <li><a href="https://make.bitsy.org/" target="_blank">Bitsy</a> — Narrative-driven pixel art game creation tool.</li>
     </ul>
   </section>
 
   <section id="contact" class="fade-in">
-    <h2>Contact</h2>
+    <h2>Contact Me</h2>
     <p>Email: <a href="mailto:alia.hall@daytonastate.edu">alia.hall@daytonastate.edu</a></p>
-    <p>Alternate: <a href="mailto:alia.hall@ucf.edu">alia.hall@ucf.edu</a></p>
+    <p>Alternate Email: <a href="mailto:alia.hall@ucf.edu">alia.hall@ucf.edu</a></p>
   </section>
+
 </main>
 
 <footer class="footer">
   <p>&copy; 2025 Alia Hall. All rights reserved.</p>
   <div style="text-align: center; margin-top: 1rem;">
-    <img src="mcknight_logo_png.png" alt="McKnight Doctoral Fellowship" style="max-width: 150px; height: auto;" />
+    <img src="mcknight_logo_png.png" alt="McKnight Doctoral Fellowship" style="max-width: 150px; height: auto;">
     <p style="font-size: 0.9rem; margin-top: 0.5rem;">Proud McKnight Doctoral Fellow</p>
   </div>
 </footer>
