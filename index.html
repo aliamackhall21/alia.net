@@ -1,11 +1,11 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alia Hall | alia.net</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     html {
       scroll-behavior: smooth;
@@ -17,7 +17,6 @@
       color: #333;
       margin: 0;
     }
-    /* Page Loader */
     #loader {
       position: fixed;
       left: 0;
@@ -49,10 +48,12 @@
     .nav-links {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
       list-style: none;
       margin-top: 1rem;
       padding: 0;
+      font-size: 0.95rem;
     }
     .nav-links a {
       color: #ffc904;
@@ -96,7 +97,7 @@
     }
     h2 {
       font-size: 1.5rem;
-      color: #555;
+      color: #ffc904;
       border-bottom: 2px solid #ffc904;
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
@@ -152,18 +153,19 @@
   <h3 style="margin: 0; font-size: 1rem;">McKnight Doctoral Fellow, University of Central Florida</h3>
   <nav>
     <ul class="nav-links">
-      <li><a href="#professional-experience">Experience</a></li>
+      <li><a href="#home">Home</a></li>
       <li><a href="#writing-sample">Writing Sample</a></li>
       <li><a href="#presentations">Talks</a></li>
-      <li><a href="#academic-features">Academic Features</a></li>
-      <li><a href="#critical-making">Critical Making Tools</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#critical-making">Critical Making</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <main class="content">
-  <section id="professional-experience" class="fade-in">
+  <section id="home" class="fade-in">
     <h2>Professional Experience</h2>
     <ul>
       <li><strong>Assistant Professor of Communication</strong> – Daytona State College (2024–Present)</li>
@@ -188,14 +190,20 @@
     </ul>
   </section>
 
-  <section id="academic-features" class="fade-in">
-    <h2>Academic Features</h2>
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
     <ul>
-      <li>Graduate Research Fellowship – University of Central Florida</li>
-      <li>McKnight Doctoral Fellowship – Florida Education Fund</li>
-      <li>IEEE ProComm 2025 Speaker – Race, Technology, and Trust</li>
-      <li>Florida Digital Humanities Presenter – Generative Representation of Racialized Faces</li>
-      <li>Text and Technology Scholar – University of Central Florida</li>
+      <li><strong>Digital Humanities Visualizations</strong> – Interactive p5.js projects exploring race and technology.</li>
+      <li><strong>Inclusive AI Course Syllabus</strong> – Designed curriculum for inclusive AI literacy in higher education.</li>
+      <li><strong>Academic Websites</strong> – Personal portfolio projects showcasing digital communication skills.</li>
+    </ul>
+  </section>
+
+  <section id="features" class="fade-in">
+    <h2>Features</h2>
+    <ul>
+      <li><strong>Interviewed on AI and Ethics</strong> – University of Central Florida Graduate Newsletter, 2025.</li>
+      <li><strong>Featured Scholar</strong> – Florida Education Fund McKnight Fellowship Spotlight.</li>
     </ul>
   </section>
 
@@ -227,13 +235,10 @@
 <button onclick="topFunction()" id="topBtn" title="Go to top">⬆️ Top</button>
 
 <script>
-  // Page Loader
   window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
     loader.classList.add("fade");
   });
-
-  // Back to Top Button
   let mybutton = document.getElementById("topBtn");
   window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
@@ -247,8 +252,6 @@
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-
-  // Fade-in Animation
   const faders = document.querySelectorAll('.fade-in');
   const appearOptions = { threshold: 0.1 };
   const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
