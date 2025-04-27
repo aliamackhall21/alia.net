@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is the Color of Love</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(45deg, #000 25%, #fff 25%, #fff 50%, #000 50%, #000 75%, #fff 75%, #fff 100%);
+            background-size: 50px 50px;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            transition: background 0.5s ease-in-out;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .dance-container {
+            display: flex;
+            gap: 30px;
+        }
+        .dancer {
+            width: 100px;
+            height: 200px;
+            background: pink;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .dancer:nth-child(1) { background: red; }
+        .dancer:nth-child(2) { background: yellow; }
+        .dancer:nth-child(3) { background: blue; }
+        
+        @keyframes dance {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body onclick="changeBackground()">
+    <audio autoplay loop>
+        <source src="soft_rnb_music.mp3" type="audio/mpeg">
+    </audio>
+    <h1>This is the Color of Love</h1>
+    <div class="dance-container">
+        <div class="dancer"></div>
+        <div class="dancer"></div>
+        <div class="dancer"></div>
+    </div>
+    <script>
+        gsap.to(".dancer", {
+            y: -20,
+            repeat: -1,
+            yoyo: true,
+            duration: 0.5,
+            ease: "power1.inOut",
+            stagger: 0.2
+        });
+        
+        function changeBackground() {
+            document.body.style.backgroundImage = 
+                "linear-gradient(45deg, #ff99cc 25%, #ccc 25%, #ccc 50%, #ff99cc 50%, #ff99cc 75%, #ccc 75%, #ccc 100%)";
+        }
+    </script>
+</body>
+</html>
+Color of Love/
+│── color_of_love.html
+│── soft_rnb_music.mp3
+<button onclick="document.querySelector('audio').play()">Play Music</button>
