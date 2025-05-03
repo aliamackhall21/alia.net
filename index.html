@@ -5,36 +5,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alia Hall | alia.net</title>
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  font-size: 1rem; /* Base size for desktop (16px) */
-}
-
-@media (max-width: 600px) {
-  body {
-    font-size: 0.9rem; /* Smaller on mobile (~14.4px) */
-  }
-}
-
-      margin: 0;
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
     }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+      }
+      .nav-links a {
+        font-size: 1.4rem;
+      }
+    }
+
     header {
       background-color: #000;
       color: #ffc904;
       text-align: center;
       padding: 2rem 1rem;
     }
+
     .nav-links {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 1.2rem;
       list-style: none;
       padding: 0;
       margin-top: 1rem;
-      flex-wrap: wrap;
     }
+
     .nav-links a {
       color: #ffc904;
       text-decoration: none;
@@ -44,6 +55,7 @@ body {
       padding-bottom: 3px;
       transition: color 0.3s;
     }
+
     .nav-links a::after {
       content: "";
       position: absolute;
@@ -54,20 +66,25 @@ body {
       background-color: #ffc904;
       transition: width 0.3s;
     }
+
     .nav-links a:hover {
       color: white;
     }
+
     .nav-links a:hover::after {
       width: 100%;
     }
+
     .content {
       max-width: 960px;
       margin: auto;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
+
     section {
       margin-bottom: 4rem;
     }
+
     h2 {
       text-align: center;
       color: #ffc904;
@@ -76,18 +93,21 @@ body {
       padding-bottom: 0.5rem;
       font-size: 1.6rem;
     }
+
     hr {
       border: none;
       border-top: 2px solid #ffc904;
       width: 50%;
       margin: 3rem auto;
     }
+
     footer {
       background-color: #000;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
+
     footer img {
       margin-top: 1rem;
       max-width: 150px;
@@ -127,15 +147,14 @@ body {
   <section id="education">
     <h2>Education</h2>
     <ul>
-      <li><strong>Ph.D. (In Progress, Anticipated Fall 2026)</strong> – Texts and Technology, University of Central Florida (McKnight Doctoral Fellow, Scientific and Technical Communication, ABD, Comprehensive Exams Spring 2025)</li>
+      <li><strong>Ph.D. (In Progress, Anticipated Fall 2026)</strong> – Texts and Technology, University of Central Florida</li>
       <li><strong>Master of Arts (2023)</strong> – Communication, University of Central Florida</li>
-      <li><strong>Bachelor of Arts (2021)</strong> – Communication Studies, Rollins College (Concentration: Organizational Leadership)</li>
+      <li><strong>Bachelor of Arts (2021)</strong> – Communication Studies, Rollins College</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-
     <h3 style="text-align:center; color:#ffc904;">Voyant Tools</h3>
     <p style="text-align:center;">Voyant is a web-based text analysis and visualization tool used for digital humanities projects and critical discourse analysis.</p>
     <p style="text-align:center;">
@@ -150,14 +169,12 @@ body {
       <a href="https://openprocessing.org/sketch/2605419" target="_blank" style="text-decoration:none; color:#ffc904;">View My Project</a>
     </p>
 
-    
-<h3 style="text-align:center; color:#ffc904;">Descript</h3>
-<p style="text-align:center;">Descript is an AI-powered audio and video editor that lets you record, transcribe, and enhance voice content seamlessly. I used it to create this original voice-over piece on AI and communication.</p>
-<p style="text-align:center;">
-  <a href="https://www.descript.com/" target="_blank" style="text-decoration:none; color:#ffc904;">Visit Descript</a> |
-  <a href="https://share.descript.com/view/P5i2I6mZzx7" target="_blank" style="text-decoration:none; color:#ffc904;">Listen to My Voice Project</a>
-</p>
-
+    <h3 style="text-align:center; color:#ffc904;">Descript</h3>
+    <p style="text-align:center;">Descript is an AI-powered audio and video editor. I used it to create this original voice-over piece on AI and communication.</p>
+    <p style="text-align:center;">
+      <a href="https://www.descript.com/" target="_blank" style="text-decoration:none; color:#ffc904;">Visit Descript</a> |
+      <a href="https://share.descript.com/view/P5i2I6mZzx7" target="_blank" style="text-decoration:none; color:#ffc904;">Listen to My Voice Project</a>
+    </p>
   </section>
 
   <section id="talks">
@@ -191,3 +208,4 @@ body {
 </footer>
 </body>
 </html>
+
