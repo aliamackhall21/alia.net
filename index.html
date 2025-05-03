@@ -5,12 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alia Hall | alia.net</title>
-  <style>
-    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9f9f9;
-      color: #333;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  font-size: 1rem; /* Base size for desktop (16px) */
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.9rem; /* Smaller on mobile (~14.4px) */
+  }
+}
+
       margin: 0;
     }
     header {
